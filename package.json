@@ -1,0 +1,31 @@
+{
+  "name": "jwthelper",
+  "version": "0.0.16",
+  "description": "Project Fonos API Server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fonoster/jwthelper"
+  },
+  "keywords": [
+    "jwt"
+  ],
+  "author": "Pedro Sanders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fonoster/jwthelper/issues"
+  },
+  "homepage": "https://github.com/fonoster/jwthelper",
+  "main": "jwthelper.js",
+  "bin": {
+    "run-jwthelper": "jwthelper.js"
+  },
+  "dependencies": {
+    "@fonos/certs": "^0.0.16",
+    "fs-extra": "^9.0.1",
+    "wait-file": "^1.0.5"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">= 6.0.0"
+  }
+}
