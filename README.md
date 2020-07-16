@@ -4,7 +4,7 @@
 
 ![publish to docker](https://github.com/fonoster/certshelper/workflows/publish%20to%20docker%20hub/badge.svg)
 
-This docker image helps to quickly create a private key and jwt token.
+This docker image helps to quickly create a private key and JWT token.
 
 ## Available Versions
 
