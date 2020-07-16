@@ -2,7 +2,7 @@
 
 > Helper to generate a private key (jwt.salt) and a jwt token
 
-![publish to docker](https://github.com/fonoster/certshelper/workflows/publish%20to%20docker%20hub/badge.svg)
+![publish to docker](https://github.com/fonoster/jwthelper/workflows/publish%20to%20docker%20hub/badge.svg)
 
 This docker image helps to quickly create a private key and JWT token.
 
