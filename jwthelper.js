@@ -8,7 +8,7 @@ const { copy } = require('fs-extra')
 const src = join(homedir(), '.fonos')
 const dest = '/certs'
 
-waitFile({resources: [join(src, 'access'), join(src, 'jwt.salt')]})
+waitFile({resources: [join(src, 'config'), join(src, 'jwt.salt')]})
 
 async function main() {
   copy(src, dest, function (err) {
