@@ -1,6 +1,6 @@
 {
   "name": "jwthelper",
-  "version": "0.0.17",
+  "version": "0.0.33",
   "description": "Project Fonos API Server",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "run-jwthelper": "jwthelper.js"
   },
   "dependencies": {
-    "@fonos/certs": "^0.0.17",
+    "@fonos/certs": "^0.0.33",
     "fs-extra": "^9.0.1",
     "wait-file": "^1.0.5"
   },
