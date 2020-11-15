@@ -15,7 +15,7 @@ You can see all images available to pull from Docker Hub via the [Tags](https://
 You can clone this repository and manually build it.
 
 ```
-cd certshelper
+cd jwthelper
 docker build -t fonoster/jwthelper:%%VERSION%% .
 ```
 
