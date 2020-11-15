@@ -1,7 +1,7 @@
 {
   "name": "jwthelper",
   "version": "0.0.42",
-  "description": "Project Fonos API Server",
+  "description": "Helper service for the creation of JWT tokens",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fonoster/jwthelper"
