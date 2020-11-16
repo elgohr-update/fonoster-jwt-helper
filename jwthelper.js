@@ -6,7 +6,7 @@ const { join } = require('path')
 const { homedir } = require('os')
 const { copy } = require('fs-extra')
 const src = join(homedir(), '.fonos')
-const dest = '/certs'
+const dest = join(homedir(), '/certs')
 
 waitFile({resources: [join(src, 'config'), join(src, 'jwt.salt')]})
 
