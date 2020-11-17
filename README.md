@@ -41,6 +41,7 @@ Run environment variables are used in the entry point script to render configura
 
 - `ACCESS_KEY_ID` - Access Key Id embeded in JWT token. Defaults to `fonos`
 - `ISS` - Issuer of the JWT. Defaults to `fonos`
+- `PRINT_ACCESS_INFO` - If `true` the service will print the access configuration to the console. Defaults to `false`
 
 ## Volumes
 
