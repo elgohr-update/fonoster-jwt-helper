@@ -31,7 +31,7 @@ The following is a minimal example of using this image.
 
 ```bash
 docker run -it \
-  -v $(pwd)/certs:/home/fonos/certs \
+  -v $(pwd)/certs:/home/fonos/access \
   fonoster/jwthelper
 ```
 
@@ -44,7 +44,7 @@ Run environment variables are used in the entry point script to render configura
 
 ## Volumes
 
-- `/home/fonos/certs` - Location of the generated certificates
+- `/home/fonos/access` - Location of the generated certificates
 
 ## Contributing
 
