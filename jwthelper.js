@@ -10,6 +10,9 @@ const src = join(homedir(), '.fonos')
 const dest = join(homedir(), '/access')
 const pathToConfig = join(src, 'config')
 
+console.log(`src => ${src}`)
+console.log(`dest => ${dest}`)
+
 waitFile({resources: [pathToConfig, join(src, 'jwt.salt')]})
 
 function printAccessInfo() {
