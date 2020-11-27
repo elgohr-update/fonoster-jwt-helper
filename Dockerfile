@@ -1,6 +1,5 @@
 FROM fonoster/base
 COPY . /scripts
 RUN ./install.sh
-RUN chown -R fonos /scripts/node_modules
-RUN chown -R fonos /home/fonos
+RUN mkdir /home/fonos/access & chown fonos /home/fonos/access
 USER fonos
