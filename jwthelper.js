@@ -16,8 +16,6 @@ function printAccessInfo() {
   const data = fs.readFileSync(pathToConfig)
   const formatted = JSON.stringify(JSON.parse(data), undefined, 2)
   console.log()
-  console.log('ACCESS CONFIG:')
-  console.log()
   console.log(formatted)
   console.log()
 }
