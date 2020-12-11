@@ -30,8 +30,8 @@ docker pull fonoster/jwthelper:latest:%%VERSION%%
 The following is a minimal example of using this image.
 
 ```bash
-docker run -it \
-  -v $(pwd)/certs:/home/fonos/access \
+sudo docker run -it \
+  -v $(pwd):/home/fonos/access \
   -e PRINT_ACCESS_INFO=true \
   fonoster/jwthelper
 ```
