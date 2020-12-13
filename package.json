@@ -1,6 +1,6 @@
 {
   "name": "jwthelper",
-  "version": "0.0.47",
+  "version": "#{FONOS_VERSION}",
   "description": "Helper service for the creation of JWT tokens",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "run": "jwthelper.js"
   },
   "dependencies": {
-    "@fonos/certs": "^0.0.47",
+    "@fonos/certs": "^#{FONOS_VERSION}",
     "fs-extra": "^9.0.1",
     "wait-file": "^1.0.5"
   },
