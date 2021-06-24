@@ -1,33 +1,33 @@
 #!/usr/bin/env node
-require('@fonos/certs/dist/run.js')
 
-const { waitFile } = require('wait-file')
-const { join } = require('path')
-const { homedir } = require('os')
-const { copy } = require('fs-extra')
-const fs = require('fs')
-const src = join(homedir(), '.fonos')
-const dest = join(homedir(), '/access')
-const pathToConfig = join(src, 'config')
+const fs = require("fs");
+const { join } = require("path");
+const { homedir } = require("os");
+const { AuthUtils, Jwt } = require("@fonos/auth");
+const authUtils = new AuthUtils(new Jwt());
 
-waitFile({resources: [pathToConfig, join(src, 'jwt.salt')]})
-
-function printAccessInfo() {
-  const data = fs.readFileSync(pathToConfig)
-  const formatted = JSON.stringify(JSON.parse(data), undefined, 2)
-  console.log()
-  console.log(formatted)
-  console.log()
+if (!fs.existsSync(join(homedir(), "private_key"))) {
+  console.log("Ups did not find private_key. Did you set the volume correctly?");
 }
 
-function main() {
-  copy(src, dest, function (err) {
-    if (err){
-        console.log('An error occured while copying the folder.')
-        return console.error(err)
+const privateKey = fs.readFileSync(join(homedir(), "private_key"), 'utf8');
+
+authUtils.createToken(
+  process.env.ACCESS_KEY_ID || "fonos",
+  process.env.ISS || "fonos",
+  process.env.ROLE || "USER",
+  privateKey,
+  process.env.EXPIRATION || "30d")
+  .then(result => {
+    const access = JSON.stringify({
+      accessKeyId: process.env.ACCESS_KEY_ID || "fonos",
+      accessKeySecret: result.accessToken
+    })
+
+    if (process.env.PRINT_ACCESS_INFO === "true") {
+      console.log(access);
     }
-    if (process.env.PRINT_ACCESS_INFO === 'true') printAccessInfo()
-  })
-}
 
-main()
+    fs.writeFileSync(join(homedir(), "config"), access);
+  })
+  .catch(console.error);

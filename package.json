@@ -20,12 +20,10 @@
     "run": "jwthelper.js"
   },
   "dependencies": {
-    "@fonos/certs": "^#{FONOS_VERSION}",
-    "fs-extra": "^9.0.1",
-    "wait-file": "^1.0.5"
+    "@fonos/auth": "^#{FONOS_VERSION}"
   },
   "preferGlobal": true,
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 14.0.0"
   }
 }
