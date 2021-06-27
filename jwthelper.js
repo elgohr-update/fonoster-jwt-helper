@@ -16,7 +16,7 @@ authUtils.createToken(
   process.env.ACCESS_KEY_ID || "fonos",
   process.env.ISS || "fonos",
   process.env.ROLE || "USER",
-  privateKey,
+  privateKey.trim(),
   process.env.EXPIRATION || "30d")
   .then(result => {
     const access = JSON.stringify({
