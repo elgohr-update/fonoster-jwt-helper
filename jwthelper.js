@@ -11,6 +11,12 @@ if (!fs.existsSync(join(homedir(), "private_key"))) {
 }
 
 const privateKey = fs.readFileSync(join(homedir(), "private_key"), 'utf8');
+const endpoint = process.env.ENDPOINT
+  ? process.env.ENDPOINT
+    .replace("http://", "")
+    .replace("https://", "")
+  : null;
+
 
 authUtils.createToken(
   process.env.ACCESS_KEY_ID || "fonos",
@@ -21,7 +27,8 @@ authUtils.createToken(
   .then(result => {
     const access = JSON.stringify({
       accessKeyId: process.env.ACCESS_KEY_ID || "fonos",
-      accessKeySecret: result.accessToken
+      accessKeySecret: result.accessToken,
+      endpoint
     })
 
     if (process.env.PRINT_ACCESS_INFO === "true") {

@@ -44,6 +44,7 @@ Run environment variables are used in the entry point script to render configura
 
 - `ACCESS_KEY_ID` - Access Key Id embeded in JWT token. Defaults to `fonos`
 - `ISS` - Issuer of the JWT. Defaults to `fonos`
+- `ENDPOINT` - If value is set it will be added to the json credentials.
 - `ROLE` - Role to include with the claims on the user token. Defaults to `USER`
 - `EXPIRATION` - Expiration time after which token will be invalid. Defaults to `30d`
 - `PRINT_ACCESS_INFO` - If `true` the service will print the access configuration to the console. Defaults to `false`
