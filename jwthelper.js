@@ -17,7 +17,6 @@ const endpoint = process.env.ENDPOINT
     .replace("https://", "")
   : null;
 
-
 authUtils.createToken(
   process.env.ACCESS_KEY_ID || "fonos",
   process.env.ISS || "fonos",
