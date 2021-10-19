@@ -1,6 +1,6 @@
 {
   "name": "jwthelper",
-  "version": "#{FONOS_VERSION}",
+  "version": "0.1",
   "description": "Helper service for the creation of JWT tokens",
   "repository": {
     "type": "git",
