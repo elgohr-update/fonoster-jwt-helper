@@ -1,6 +1,6 @@
 {
   "name": "jwthelper",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Helper service for the creation of JWT tokens",
   "repository": {
     "type": "git",
