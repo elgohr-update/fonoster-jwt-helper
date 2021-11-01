@@ -3,7 +3,7 @@
 const fs = require("fs");
 const { join } = require("path");
 const { homedir } = require("os");
-const { AuthUtils, Jwt } = require("@fonos/auth");
+const { AuthUtils, Jwt } = require("@fonoster/auth");
 const authUtils = new AuthUtils(new Jwt());
 
 if (!fs.existsSync(join(homedir(), "private_key"))) {
@@ -18,14 +18,14 @@ const endpoint = process.env.ENDPOINT
   : null;
 
 authUtils.createToken(
-  process.env.ACCESS_KEY_ID || "fonos",
-  process.env.ISS || "fonos",
+  process.env.ACCESS_KEY_ID || "fonoster",
+  process.env.ISS || "fonoster",
   process.env.ROLE || "USER",
   privateKey.trim(),
   process.env.EXPIRATION || "30d")
   .then(result => {
     const access = JSON.stringify({
-      accessKeyId: process.env.ACCESS_KEY_ID || "fonos",
+      accessKeyId: process.env.ACCESS_KEY_ID || "fonoster",
       accessKeySecret: result.accessToken,
       endpoint
     })

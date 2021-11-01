@@ -20,7 +20,7 @@
     "run": "jwthelper.js"
   },
   "dependencies": {
-    "@fonos/auth": "^#{FONOS_VERSION}"
+    "@fonoster/auth": "^#{FONOSTER_VERSION}"
   },
   "preferGlobal": true,
   "engines": {

@@ -42,8 +42,8 @@ sudo docker run -it \
 
 Run environment variables are used in the entry point script to render configuration templates. You can specify the values of these variables during `docker run`, `docker-compose up`, or in Kubernetes manifests in the `env` array.
 
-- `ACCESS_KEY_ID` - Access Key Id embeded in JWT token. Defaults to `fonos`
-- `ISS` - Issuer of the JWT. Defaults to `fonos`
+- `ACCESS_KEY_ID` - Access Key Id embeded in JWT token. Defaults to `fonoster`
+- `ISS` - Issuer of the JWT. Defaults to `fonoster`
 - `ENDPOINT` - If value is set it will be added to the json credentials.
 - `ROLE` - Role to include with the claims on the user token. Defaults to `USER`
 - `EXPIRATION` - Expiration time after which token will be invalid. Defaults to `30d`
@@ -51,12 +51,12 @@ Run environment variables are used in the entry point script to render configura
 
 ## Volumes
 
-- `/home/fonos/private_key` - The location of the private key. Required.
-- `/home/fonos/config` - A place to write the access info to. Required.
+- `/home/fonoster/private_key` - The location of the private key. Required.
+- `/home/fonoster/config` - A place to write the access info to. Required.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/fonoster/fonos/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/fonoster/fonoster/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -66,4 +66,4 @@ See also the list of contributors who [participated](https://github.com/fonoster
 
 ## License
 
-Copyright (C) 2021 by Fonoster Inc. MIT License (see [LICENSE](https://github.com/fonoster/fonos/blob/master/LICENSE) for details).
+Copyright (C) 2021 by Fonoster Inc. MIT License (see [LICENSE](https://github.com/fonoster/fonoster/blob/master/LICENSE) for details).
