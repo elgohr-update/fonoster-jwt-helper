@@ -31,8 +31,8 @@ The following is a minimal example of using this image.
 
 ```bash
 sudo docker run -it \
-  -v $(pwd)/private_key:/home/fonos/private_key \
-  -v $(pwd)/config:/home/fonos/config \
+  -v $(pwd)/private_key:/home/fonoster/private_key \
+  -v $(pwd)/config:/home/fonoster/config \
   -e PRINT_ACCESS_INFO=true \
   -e EXPIRATION="1h" \
   fonoster/jwthelper
