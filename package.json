@@ -1,5 +1,5 @@
 {
-  "name": "jwthelper",
+  "name": "@fonoster/jwthelper",
   "version": "0.1.0",
   "description": "Helper service for the creation of JWT tokens",
   "repository": {
